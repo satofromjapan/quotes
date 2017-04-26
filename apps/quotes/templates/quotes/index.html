@@ -3,18 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Login/Registration</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"media="screen" title="no title"  charset="utf-8">
   </head>
   <body>
     <div class="wrapper">
-      <div class="messages">
-        <ul>
+
           {% if messages %}
           {% for message in messages%}
+          <div class="messages">
+            <ul>
           <li>{{message}}</li>
+            </ul>
+          </div>
           {% endfor %}
           {% endif %}
-        </ul>
-      </div>
+
       <div class="register">
         <h3>Register</h3>
         <form class="" action="/register" method="post">

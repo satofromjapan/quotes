@@ -3,14 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Quotes | Users</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"media="screen" title="no title"  charset="utf-8">
   </head>
   <body>
     <div class="wrapper">
       <div class="top">
-        <a href="/quotes">Dashboard</a>
-        <a href="/logout">Logout</a>
         <h3>Posts by {{thisuser.first_name}}</h3>
         <p>Count: {{thisuser.quotes.count}}</p>
+        <a href="/quotes">Dashboard</a>
+        <a href="/logout">Logout</a>
       </div>
       <div class="content">
         {% for quote in user_quotes %}

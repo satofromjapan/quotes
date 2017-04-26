@@ -1,0 +1,76 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.wrapper {
+  width: 1000px;
+}
+
+.messages,
+.register,
+.login {
+  width: 300px;
+  margin: 10px auto;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.messages {
+  color: red;
+  padding-left: 25px;
+}
+
+label {
+  display: block;
+}
+
+.top {
+  border-bottom: 3px solid black;
+  height: 70px;
+}
+
+.top > h2 {
+  display: inline-block;
+  margin-right: 70%;
+}
+
+.quotable,
+.favorites {
+  border: 1px solid black;
+  display: inline-block;
+  width: 300px;
+  vertical-align: top;
+  overflow: scroll;
+  padding: 3px;
+  margin: 10px;
+  max-height: 400px;
+}
+
+.quote,
+.f_quote {
+  margin: 5px;
+  border: 1px dotted black;
+  padding: 3px;
+}
+
+.add_quote {
+  border: 1px solid grey;
+  width: 700px;
+  margin: 5px auto;
+  padding: 5px;
+}
+
+textarea {
+  resize: none;
+  vertical-align: top;
+  margin-top: 5px;
+}
+
+.content {
+  margin: 20px 0px 0px 50px;
+}
+
+.content > p{
+  margin: 10px;
+}

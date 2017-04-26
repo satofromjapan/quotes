@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Quotes</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"media="screen" title="no title"  charset="utf-8">
   </head>
   <body>
     <div class="wrapper">
@@ -31,13 +33,15 @@
         {% endfor %}
       </div>
       <div class="add_quote">
-        <div class="messages">
+
           {% if messages %}
           {% for message in messages%}
+          <div class="messages">
           {{message}}
+          </div>
           {% endfor %}
           {% endif %}
-        </div>
+
         <h4>Contribute a Quote:</h4>
         <form class="" action="/add_quote" method="post">
           {% csrf_token%}
