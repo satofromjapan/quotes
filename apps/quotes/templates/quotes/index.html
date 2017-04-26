@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login/Registration</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="messages">
+        <ul>
+          {% if messages %}
+          {% for message in messages%}
+          <li>{{message}}</li>
+          {% endfor %}
+          {% endif %}
+        </ul>
+      </div>
+      <div class="register">
+        <h3>Register</h3>
+        <form class="" action="/register" method="post">
+          {% csrf_token%}
+          <label for="first_name">First Name: <input type="text" name="first_name" value=""></label>
+          <label for="last_name">Last Name: <input type="text" name="last_name" value=""></label>
+          <label for="email">Email: <input type="text" name="email" value=""></label>
+          <label for="password">Password: <input type="password" name="password" value=""></label>
+          <label for="confirm_password">Confirm Password: <input type="password" name="confirm_password" value=""></label>
+          <label for="birthday">Date of Birth <input type="date" name="birthday" value=""></label>
+          <input type="submit" name="" value="Register">
+        </form>
+      </div>
+      <div class="login">
+        <h3>Login</h3>
+        <form class="" action="/login" method="post">
+          {% csrf_token%}
+          <label for="email">Email: <input type="text" name="email" value=""></label>
+          <label for="password">Password: <input type="password" name="password" value=""></label>
+          <input type="submit" name="" value="Login">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
